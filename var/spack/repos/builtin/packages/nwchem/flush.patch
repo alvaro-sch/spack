@@ -1,0 +1,12 @@
+diff --git a/src/util/util_flush.F b/src/util/util_flush.F
+index 1911204964..e002744d7d 100644
+--- a/src/util/util_flush.F
++++ b/src/util/util_flush.F
+@@ -23,6 +23,7 @@ c
+ #if defined(GFORTRAN)
+       call flush(unit)
+ #endif
++      call flush(unit)
+       call util_cflush()
+ c
+       end

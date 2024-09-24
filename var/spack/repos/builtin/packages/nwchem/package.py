@@ -73,6 +73,9 @@ class Nwchem(Package):
     # Prior versions of NWChem, including 7.0.2, were not able to link with FFTW
     patch("fftw_splans.patch", when="@7.2.0:7.2.2 +fftw3")
 
+    # Force arbitrary unit flushing
+    patch("flush.patch")
+
     depends_on("blas")
     depends_on("lapack")
     depends_on("mpi")
